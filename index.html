@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rights Offerings Training | Corporate Actions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #002855;
+            --secondary: #0057A8;
+            --accent: #4A90E2;
+            --light: #EBF5FF;
+            --dark: #001933;
+            --text: #1e1e1e;
+            --text-light: #666;
+            --bg: #F8FBFF;
+            --card: #ffffff;
+            --border: #D6E4F5;
+            --shadow: rgba(0, 40, 85, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: 20px 20px;
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 2px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .nav-link {
+            padding: 1.2rem 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            border-bottom-color: var(--accent);
+            background: rgba(144, 169, 85, 0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+
+        h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin: 2rem 0 1rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin: 1.5rem 0 0.8rem;
+            font-weight: 600;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px var(--shadow);
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px var(--shadow);
+        }
+
+        .key-terms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .term-card {
+            background: linear-gradient(135deg, var(--card) 0%, var(--bg) 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .term-card:hover {
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+
+        .term-title {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .company-card {
+            background: var(--card);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .company-card.rent {
+            border-top: 4px solid #e74c3c;
+        }
+
+        .company-card.gci {
+            border-top: 4px solid #3498db;
+        }
+
+        .company-name {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .company-name.rent {
+            color: #e74c3c;
+        }
+
+        .company-name.gci {
+            color: #3498db;
+        }
+
+        .detail-item {
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: var(--bg);
+            border-radius: 6px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .process-flow {
+            background: var(--card);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: flex-start;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .flow-step:hover {
+            background: white;
+            transform: translateX(10px);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .visual-diagram {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        .faq-item {
+            background: var(--card);
+            border-radius: 8px;
+            margin: 1rem 0;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--bg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            display: none;
+            line-height: 1.8;
+        }
+
+        .faq-answer.active {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .quiz-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 16px var(--shadow);
+        }
+
+        .quiz-question {
+            background: white;
+            color: var(--text);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .quiz-question-text {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .quiz-options {
+            list-style: none;
+        }
+
+        .quiz-option {
+            padding: 1rem;
+            margin: 0.8rem 0;
+            background: var(--bg);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .quiz-option:hover {
+            background: var(--light);
+            border-color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .quiz-option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .quiz-option.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light), var(--accent));
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--primary);
+        }
+
+        .important-note {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+
+        .important-note strong {
+            color: #856404;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        li {
+            margin: 0.8rem 0;
+        }
+
+        .footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:hover {
+            background: var(--bg);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .diagram-box {
+            background: white;
+            border: 3px solid var(--primary);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--accent);
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-link {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>Rights Offerings Training</h1>
+            <p class="subtitle">Understanding Corporate Actions, Dilution, and Operational Processing</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#overview" class="nav-link">Overview</a>
+            <a href="#key-concepts" class="nav-link">Key Concepts</a>
+            <a href="#case-studies" class="nav-link">Case Studies</a>
+            <a href="#operations" class="nav-link">Operations</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#quiz" class="nav-link">Knowledge Check</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- OVERVIEW SECTION -->
+        <section id="overview">
+            <h2>What is a Rights Offering?</h2>
+            
+            <div class="card">
+                <p><strong>A rights offering (also called a rights issue) is a corporate action where a company raises capital by giving existing shareholders the opportunity to purchase additional shares at a discounted price, typically proportional to their current holdings.</strong></p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Why Do Companies Conduct Rights Offerings?</h3>
+                <p>Companies pursue rights offerings for several strategic reasons:</p>
+                <ul>
+                    <li><strong>Capital Raising:</strong> Quickly raise funds without traditional underwriting costs</li>
+                    <li><strong>Financial Restructuring:</strong> Reduce debt, improve balance sheets during distress</li>
+                    <li><strong>Growth Initiatives:</strong> Fund expansion, acquisitions, or infrastructure investments</li>
+                    <li><strong>Shareholder Protection:</strong> Offer existing shareholders first opportunity before dilution</li>
+                    <li><strong>Lower Cost:</strong> Generally less expensive than traditional public offerings</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Key Characteristics</h3>
+                <ul>
+                    <li><strong>Pro-Rata Distribution:</strong> Rights are distributed based on current shareholdings</li>
+                    <li><strong>Subscription Ratio:</strong> Determines how many rights are needed to purchase one share (e.g., 5 rights = 1 share)</li>
+                    <li><strong>Subscription Price:</strong> Typically offered at a discount (15-25%) to current market price</li>
+                    <li><strong>Tradeable Rights:</strong> Rights can often be sold if shareholder chooses not to exercise</li>
+                    <li><strong>Time-Limited:</strong> Rights expire on a specific date and become worthless if not exercised</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- KEY CONCEPTS SECTION -->
+        <section id="key-concepts">
+            <h2>Key Concepts & Terminology</h2>
+
+            <div class="key-terms">
+                <div class="term-card">
+                    <div class="term-title">Basic Subscription</div>
+                    <p>The right to purchase shares based on your proportional ownership. If you own 1,000 shares and the ratio is 1:1, you can purchase 1,000 additional shares at the subscription price.</p>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">Oversubscription</div>
+                    <p>The ability to request additional shares beyond your basic subscription allocation. These are only granted if other shareholders don't fully exercise their basic subscription rights.</p>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">Subscription Ratio</div>
+                    <p>Defines how many rights are required to purchase one share. A ratio of "5 rights for 1 share" means you need 5 rights to buy 1 new share of common stock.</p>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">Dilution</div>
+                    <p>When new shares are issued, each existing share represents a smaller percentage of ownership. Rights offerings allow shareholders to maintain their proportional ownership by participating.</p>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">Pro-Rata Ownership</div>
+                    <p>Your proportional stake in the company. If you own 2% before the offering and exercise your full basic subscription, you maintain 2% ownership after.</p>
+                </div>
+
+                <div class="term-card">
+                    <div class="term-title">Subscription Price</div>
+                    <p>The discounted price at which shareholders can purchase new shares during the rights offering period.</p>
+                </div>
+            </div>
+
+            <div class="visual-diagram">
+                <h3>Understanding Dilution vs. Maintaining Pro-Rata Ownership</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                    <div>
+                        <h4 style="text-align: center; color: #e74c3c;">Scenario A: No Participation (Diluted)</h4>
+                        <div class="diagram-box" style="background: #ffe6e6;">
+                            Before: Own 1,000 shares<br>
+                            Out of 100,000 total<br>
+                            <strong>= 1.0% ownership</strong>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="diagram-box" style="background: #ffe6e6;">
+                            Rights Offering (1:1 ratio)<br>
+                            <strong>You don't participate</strong>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="diagram-box" style="background: #ffcccc;">
+                            After: Still own 1,000 shares<br>
+                            Out of 200,000 total<br>
+                            <strong>= 0.5% ownership</strong><br>
+                            <span style="color: #e74c3c;">DILUTED by 50%</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 style="text-align: center; color: #27ae60;">Scenario B: Full Participation (Maintained)</h4>
+                        <div class="diagram-box" style="background: #e6ffe6;">
+                            Before: Own 1,000 shares<br>
+                            Out of 100,000 total<br>
+                            <strong>= 1.0% ownership</strong>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="diagram-box" style="background: #e6ffe6;">
+                            Rights Offering (1:1 ratio)<br>
+                            <strong>You exercise all rights</strong><br>
+                            Purchase 1,000 new shares
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="diagram-box" style="background: #ccffcc;">
+                            After: Now own 2,000 shares<br>
+                            Out of 200,000 total<br>
+                            <strong>= 1.0% ownership</strong><br>
+                            <span style="color: #27ae60;">MAINTAINED pro-rata</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Subscription Ratios Explained</h3>
+                <p>Rights offerings often require multiple rights to purchase one share. This is called the <strong>subscription ratio</strong>.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subscription Ratio</th>
+                            <th>Meaning</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1 for 1</strong></td>
+                            <td>1 right = 1 share</td>
+                            <td>Own 1,000 shares → Get 1,000 rights → Can buy 1,000 shares</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5 for 1</strong></td>
+                            <td>5 rights = 1 share</td>
+                            <td>Own 1,000 shares → Get 1,000 rights → Can buy 200 shares</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3 for 2</strong></td>
+                            <td>3 rights = 2 shares</td>
+                            <td>Own 900 shares → Get 900 rights → Can buy 600 shares</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="important-note">
+                    <strong>Important:</strong> Fractional rights are typically rounded up or down based on the prospectus terms. Always check the specific offering documents for fractional share treatment.
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE STUDIES SECTION -->
+        <section id="case-studies">
+            <h2>Case Studies: Two Different Rights Offerings</h2>
+            
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Both companies raised capital through rights offerings, but for fundamentally different strategic reasons. Understanding these motivations is crucial for corporate actions professionals.</p>
+
+            <div class="comparison-grid">
+                <div class="company-card rent">
+                    <h3 class="company-name rent">Rent the Runway (RENT)</h3>
+                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Financial Distress & Balance Sheet Restructuring"</p>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Announcement Date:</span>
+                        August 21, 2025
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Offering Size:</span>
+                        $12.5 million
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Subscription Price:</span>
+                        $4.08 per share (20% discount to 30-day VWAP)
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Strategic Context:</span>
+                        Part of a broader growth recapitalization with APS, STORY3, and Nexus Capital
+                    </div>
+                    
+                    <h4 style="margin-top: 1.5rem;">The Situation</h4>
+                    <p>Rent the Runway, the disruptor that created the fashion rental category, found itself in a precarious financial position by mid-2025. Despite being a pioneer in the sharing economy and changing how women access designer fashion, the company was struggling with an unsustainable debt load and needed immediate balance sheet repair.</p>
+                    
+                    <p style="margin-top: 1rem;">CEO Jennifer Hyman acknowledged that while the company had "executed a significant and successful strengthening of the business over the past 18 months" and brought it "to nearly free cash flow breakeven in 2024," the existing capital structure was preventing sustainable growth. The company needed more than incremental improvements—it needed a comprehensive recapitalization.</p>
+                    
+                    <h4 style="margin-top: 1.5rem;">Why This Rights Offering?</h4>
+                    <ul>
+                        <li><strong>Balance Sheet Repair:</strong> The transaction reduced outstanding debt from substantial levels to just $120M with maturity extended to 2029, dramatically improving financial flexibility and reducing interest expense</li>
+                        <li><strong>Financial Distress Mitigation:</strong> The company was at a critical juncture where without intervention, the debt burden would have prevented any meaningful growth initiatives</li>
+                        <li><strong>Debt-to-Equity Conversion:</strong> APS (a major creditor) converted a substantial portion of its original debt investment into common equity ownership, de-leveraging the balance sheet</li>
+                        <li><strong>Sustainable Growth Path:</strong> The recapitalization created a healthier capital structure that would allow RTR to "grow in a more sustainable, healthy way and take advantage of the significant market for rental that continues to expand across the U.S."</li>
+                        <li><strong>Shareholder Protection & Participation:</strong> Despite the distressed situation, the rights offering gave existing shareholders the opportunity to participate at a discount and potentially avoid or reduce dilution from the debt conversion and new capital injection</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: 1.5rem;">Key Outcome & Strategic Significance:</h4>
+                    <p>The rights offering was fully backstopped by institutional investors (APS, STORY3, Nexus), meaning they guaranteed to purchase any unsubscribed shares. This backstop was essential—it ensured the restructuring wasn't dependent on shareholder participation, providing certainty of execution.</p>
+                    
+                    <p style="margin-top: 1rem;">This was a <strong>rescue financing</strong> dressed as a growth recapitalization. The rights offering component, while relatively modest at $12.5M, was part of a larger strategic transaction designed to save the company and position it for long-term viability. The involvement of APS, STORY3, and Nexus signaled that sophisticated investors saw "tremendous upside potential" if the balance sheet issues could be resolved.</p>
+                    
+                    <p style="margin-top: 1rem;"><em>Lesson: Rights offerings in distressed situations often feature backstop agreements and are part of broader restructuring packages. They represent a lifeline for companies that need immediate capital and debt relief.</em></p>
+                </div>
+
+                <div class="company-card gci">
+                    <h3 class="company-name gci">GCI Liberty (GLIBA)</h3>
+                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Growth Capital & Strategic Expansion"</p>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Announcement Date:</span>
+                        November 5, 2025
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Offering Size:</span>
+                        $300 million
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Subscription Price:</span>
+                        $27.20 per share (20% discount to 10-day VWAP)
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Subscription Ratio:</span>
+                        0.3838 rights per share held (each whole right = 1 share)
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Offering Period:</span>
+                        November 26, 2025 - December 17, 2025
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-label">Final Result:</span>
+                        Fully subscribed - 11,059,127 shares issued, ~95% via basic subscription
+                    </div>
+                    
+                    <h4 style="margin-top: 1.5rem;">The Situation</h4>
+                    <p>GCI Liberty operates Alaska's largest telecommunications provider, serving more than 200 communities across a state larger than Texas, California, and Montana combined. Over 45 years, GCI has invested $4.7 billion in building and maintaining what is described as "Alaska's Most Advanced Network"—a hybrid fiber optic, satellite, and microwave system that connects some of the most remote communities in North America.</p>
+                    
+                    <p style="margin-top: 1rem;">Unlike Rent the Runway, GCI Liberty came to market from a position of strength. The company wasn't facing financial distress; rather, it identified strategic opportunities that required substantial capital. The Board of Directors declared the rights offering as a dividend to shareholders, signaling confidence in the company's trajectory and giving shareholders first access to participate in the company's growth at an attractive price.</p>
+                    
+                    <h4 style="margin-top: 1.5rem;">Why This Rights Offering?</h4>
+                    <ul>
+                        <li><strong>Growth Capital Deployment:</strong> Fund working capital needs and substantial capital expenditures to continue expanding and modernizing Alaska's telecommunications infrastructure in underserved and remote areas</li>
+                        <li><strong>Infrastructure Investment:</strong> Support continued buildout of fiber networks, 5G deployment, and next-generation connectivity solutions. GCI operates critical infrastructure including the fiber optic cable system running undersea from Juneau to Seattle, connecting Alaska to the lower 48 states</li>
+                        <li><strong>Flexible Debt Management:</strong> Potential repayment or refinancing of outstanding indebtedness from a position of financial health, improving already-strong balance sheet metrics</li>
+                        <li><strong>Strategic M&A Capability:</strong> Pursue "highly accretive acquisitions in Alaska"—the company has identified potential targets that would strengthen market position and expand service offerings</li>
+                        <li><strong>Diversification Opportunities:</strong> Explore "opportunistic investments or partnerships" that could expand beyond Alaska telecommunications while leveraging existing expertise in remote connectivity</li>
+                        <li><strong>Shareholder-First Approach:</strong> Offering existing shareholders the ability to participate in growth at a 20% discount to market, maintaining or increasing their proportional ownership before any institutional capital was raised</li>
+                    </ul>
+                    
+                    <h4 style="margin-top: 1.5rem;">Key Outcome & Strategic Significance:</h4>
+                    <p>The offering was remarkably successful, demonstrating exceptional shareholder confidence. It was fully subscribed with approximately 95% of shares taken via basic subscription privilege. This meant nearly all existing shareholders exercised their right to maintain their proportional ownership and participate in the company's growth story.</p>
+                    
+                    <p style="margin-top: 1rem;">The oversubscription demand was intense—with only 5% of shares available for oversubscription allocation (roughly 552,956 shares), the subscription agent had to conduct multiple rounds of proration among oversubscribers. This competitive allocation process, detailed in the final prospectus, underscored the attractiveness of the investment opportunity.</p>
+                    
+                    <p style="margin-top: 1rem;">Notably, <strong>no backstop was needed</strong>. The company raised nearly all $300 million from existing shareholders rather than requiring institutional guarantees. Major shareholder Dr. John Malone publicly announced his intention to fully exercise both basic and oversubscription privileges, sending a strong signal of confidence to the market.</p>
+                    
+                    <p style="margin-top: 1rem;"><em>Lesson: Rights offerings from financially healthy companies with clear growth strategies and strong shareholder bases can be executed without backstops and often see exceptional participation rates. The 95% basic subscription rate is considered a hallmark of a successful offering.</em></p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <h3>Key Comparison: Same Tool, Different Purposes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Factor</th>
+                            <th>Rent the Runway</th>
+                            <th>GCI Liberty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Financial Health</strong></td>
+                            <td>Distressed - needed rescue</td>
+                            <td>Healthy - seeking growth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Primary Goal</strong></td>
+                            <td>Balance sheet restructuring</td>
+                            <td>Capital for expansion</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Offering Size</strong></td>
+                            <td>$12.5M (smaller, part of larger deal)</td>
+                            <td>$300M (substantial raise)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backstop</strong></td>
+                            <td>Fully backstopped by investors</td>
+                            <td>No backstop needed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Shareholder Response</strong></td>
+                            <td>Uncertain (backstopped)</td>
+                            <td>Strong (95% basic subscription)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Use of Proceeds</strong></td>
+                            <td>Debt reduction, survival</td>
+                            <td>Growth, acquisitions, infrastructure</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- OPERATIONS SECTION -->
+        <section id="operations">
+            <h2>Internal Processing Mechanics</h2>
+            
+            <div class="important-note">
+                <strong>Critical SLA:</strong> The team has a 24-hour SLA to process and submit client responses to rights offerings. PSOP (DTC's Participant Service Operations) is open daily for rights submissions between 8:00 AM and 2:15 PM EST. These offers have hard market deadlines that cannot be extended. Missing the PSOP window means clients lose their opportunity to participate. Precision and speed are essential.
+            </div>
+
+            <div class="card">
+                <h3>The 7-Step Internal Process</h3>
+                <p>Here is the standardized workflow for processing rights offerings from entitlement through final settlement:</p>
+            </div>
+
+            <div class="process-flow">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">Deliver Free Trade of the Rights</div>
+                        <p>For clients who have elected to participate in the offering, deliver the rights OFF their accounts via a free delivery (DVP-free) transaction. Rights are treated as separate securities with their own CUSIP and must be removed from client accounts to be submitted into the offer.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">Receive vs. Payment (RVP) Trade for Basic Subscription</div>
+                        <p>Process the basic subscription as a receive-versus-payment trade. Client pays the subscription price × number of shares subscribed. This trade settles when the newly issued common stock is delivered.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">Segregate Transaction of the Entitlement</div>
+                        <p>Execute a segregate transaction to move the common stock position from the client's general location to the restricted/segregated location</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">Cash Debit for Oversubscription Upon Submission</div>
+                        <p>If client requests oversubscription, immediately debit their account for the <strong>full oversubscription cost</strong> (subscription price × oversubscription quantity requested) when submitting the rights to the offer via PSOP at DTC. This ensures the client has committed capital.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-title">Reverse Debit When Oversubscription Finalized</div>
+                        <p>After the issuer finalizes allocation and DTC distributes the allocation notice, reverse the original cash debit. The client may not receive their full oversubscription request due to proration.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <div class="step-title">Second RVP Trade for Final Oversubscription</div>
+                        <p>Process a second RVP trade for the <strong>actual allocated oversubscription shares</strong> (which may be less than requested). Client pays subscription price × actual shares received.</p>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <div class="step-title">Final Segregate When DTC Releases Common Stock</div>
+                        <p>Execute final segregate transaction to move the newly issued common stock from segregation back to the client's trading account once DTC releases the shares and all settlements are complete.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="visual-diagram">
+                <h3>Visual Timeline: From Announcement to Settlement</h3>
+                <div style="margin-top: 2rem;">
+                    <div class="diagram-box" style="background: #e3f2fd;">
+                        <strong>Day 0:</strong> Company Announces Rights Offering<br>
+                        Record date established, subscription price set
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="diagram-box" style="background: #e8f5e9;">
+                        <strong>Record Date:</strong> Rights Distributed to Shareholders<br>
+                        <em>Clients receive their rights allocation in their accounts</em>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="diagram-box" style="background: #fff3e0;">
+                        <strong>Subscription Period:</strong> Clients Decide to Participate<br>
+                        <em>Steps 1-4: Deliver rights off accounts, RVP basic subscription, segregate common, debit oversubscription cash</em><br>
+                        <strong>PSOP Window: 8:00 AM - 2:15 PM EST daily</strong>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="diagram-box" style="background: #fce4ec;">
+                        <strong>Expiration Date:</strong> Rights Expire (Hard Deadline)<br>
+                        Final PSOP submission deadline - no extensions
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="diagram-box" style="background: #f3e5f5;">
+                        <strong>Allocation Period:</strong> Issuer Determines Oversubscription<br>
+                        <em>Step 5: Reverse cash debit when allocation known</em>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="diagram-box" style="background: #e0f2f1;">
+                        <strong>Settlement:</strong> New Shares Delivered<br>
+                        <em>Steps 6-7: Second RVP for actual oversub, Final Unseg after DTC release of shares</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Key Operational Concepts</h3>
+                
+                <h4>PSOP (Participant Service Operations)</h4>
+                <p>DTC's system for submitting and processing voluntary corporate actions, including rights offerings. Teams use PSOP to submit client instructions within the critical window. <strong>PSOP is open daily for rights submissions between 8:00 AM and 2:15 PM EST.</strong> Missing this window means the submission cannot be processed for that day.</p>
+                
+                <h4>Oversubscription Allocation</h4>
+                <p>The issuer determines the final allocation method, which typically includes:</p>
+                <ul>
+                    <li><strong>Pro-rata allocation:</strong> Based on the number of rights underlying the basic subscription (most common)</li>
+                    <li><strong>Multiple rounds of proration:</strong> As seen in GCI Liberty's offering, where no single proration factor existed</li>
+                    <li><strong>First-come-first-served:</strong> Rare, but sometimes used for smaller offerings</li>
+                </ul>
+                
+                <h4>Why the Two-Stage Cash Debit?</h4>
+                <p>The initial full debit (Step 4) locks in client commitment and ensures funds are available. The reversal and re-debit (Steps 5-6) accounts for the reality that clients rarely receive their full oversubscription request due to high demand and proration.</p>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Why would a financially healthy company like GCI Liberty do a rights offering instead of a traditional offering?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Rights offerings offer several advantages even for healthy companies: (1) Lower costs - no underwriting fees, (2) Faster execution - less regulatory burden than traditional offerings, (3) Shareholder-friendly - gives existing shareholders first opportunity to participate at a discount before dilution, (4) Signal of confidence - when fully subscribed, demonstrates strong shareholder support, (5) Flexibility - can be used for specific strategic purposes like acquisitions or infrastructure investment.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What does it mean when a rights offering is "backstopped"?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    A backstop agreement means that one or more investors (typically institutional investors or existing major shareholders) commit to purchase any shares that are not subscribed for by other shareholders. This guarantees the company will raise the full amount intended. Rent the Runway's offering was fully backstopped by APS, STORY3, and Nexus, which was essential given the company's distressed financial situation. Backstops are more common in distressed situations or when the company needs certainty of full funding.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How is oversubscription typically allocated when there's high demand?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    The issuer determines the allocation methodology, which is disclosed in the prospectus. Most commonly, oversubscription shares are allocated pro-rata based on the number of rights underlying each participant's basic subscription privilege. This means larger shareholders get proportionally more of the oversubscription pool. In GCI Liberty's case, there were multiple rounds of proration among oversubscribers, which is typical when demand significantly exceeds available shares. The process continues until all available shares are allocated.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Why do we debit the full oversubscription amount upfront in Step 4?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    Debiting the full requested oversubscription amount serves multiple purposes: (1) Ensures the client has sufficient funds committed before submission to DTC, (2) Prevents the client from using those funds for other purposes during the allocation period, (3) Demonstrates serious intent to PSOP/DTC, (4) Simplifies the subsequent reversal and re-debit process once actual allocation is known. This is standard industry practice for managing the uncertainty inherent in oversubscription requests.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What happens if a client doesn't exercise their rights?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    If a client doesn't exercise their rights, several outcomes are possible: (1) The rights expire worthless on the expiration date, (2) The client's ownership is diluted as other shareholders participate, (3) If the rights are tradeable, the client can sell them before expiration (in many offerings, the subscription agent will sell unexercised rights and distribute proceeds to shareholders), (4) The client's proportional ownership percentage decreases even though their absolute number of shares remains the same.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How does the subscription ratio affect dilution?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    The subscription ratio directly determines how many new shares will be issued relative to existing shares. A 1:1 ratio (1 right = 1 share) doubles the shares outstanding if fully subscribed, potentially halving ownership for non-participants. A 5:1 ratio (5 rights = 1 share) increases shares outstanding by 20% if fully subscribed. The ratio is set based on how much capital the company wants to raise and at what price. Lower ratios (fewer rights needed per share) create more potential dilution but raise more capital.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What's the significance of the 24-hour SLA and PSOP window?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    The 24-hour SLA is critical because: (1) Rights offerings have hard, non-negotiable market deadlines that cannot be extended, (2) PSOP (DTC's submission system) is only open between 8:00 AM and 2:15 PM EST daily for rights submissions - missing this window means waiting until the next day, (3) Late submissions mean clients lose their opportunity to participate, (4) Client decisions often come in at the last minute, requiring rapid processing, (5) Missing the deadline can result in significant financial harm to clients who intended to participate. This is why the team must be extremely efficient and organized in processing rights offering instructions.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Why did Rent the Runway need a rights offering if they were doing debt restructuring?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    The rights offering was part of a comprehensive recapitalization package. While APS was converting debt to equity, the rights offering gave existing shareholders the opportunity to participate and potentially avoid or reduce dilution from that conversion. It also raised additional capital ($12.5M) while being shareholder-friendly. The fact that it was fully backstopped meant the restructuring wasn't dependent on shareholder participation - the backstop investors would purchase any unsubscribed shares - but it gave shareholders the choice to maintain their ownership percentage at a discount.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What does "95% basic subscription" tell us about GCI Liberty's offering?
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    This is an extremely positive signal indicating: (1) Strong shareholder confidence in the company and its growth strategy, (2) Shareholders wanted to maintain their pro-rata ownership, (3) The 20% discount was attractive relative to market price, (4) Only 5% of the offering was available for oversubscription, creating intense competition for those shares, (5) This led to multiple rounds of proration for oversubscribers, (6) The company successfully raised nearly all $300M from existing shareholders rather than needing external investors. This is considered a very successful rights offering outcome.
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION -->
+        <section id="quiz">
+            <div class="quiz-section">
+                <h2 style="color: white; border: none;">Knowledge Check</h2>
+                <p style="font-size: 1.1rem; opacity: 0.95;">Test your understanding with these scenario-based questions. Discuss as a group.</p>
+
+                <div class="quiz-question">
+                    <div class="quiz-question-text">1. A client owns 10,000 shares of XYZ Corp. XYZ announces a rights offering with a subscription ratio of 5:1 (5 rights = 1 share). How many shares can the client purchase through their basic subscription privilege?</div>
+                    <ul class="quiz-options">
+                        <li class="quiz-option" onclick="selectOption(this, false)">A) 10,000 shares</li>
+                        <li class="quiz-option" onclick="selectOption(this, true)">B) 2,000 shares</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">C) 5,000 shares</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">D) 50,000 shares</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 6px; display: none;" class="explanation">
+                        <strong>Correct Answer: B) 2,000 shares</strong><br>
+                        Calculation: 10,000 shares owned ÷ 5 rights per share = 2,000 shares can be purchased
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <div class="quiz-question-text">2. What is the PRIMARY reason Rent the Runway conducted their rights offering in August 2025?</div>
+                    <ul class="quiz-options">
+                        <li class="quiz-option" onclick="selectOption(this, false)">A) To fund expansion into new markets</li>
+                        <li class="quiz-option" onclick="selectOption(this, true)">B) As part of a financial restructuring to reduce debt and improve their balance sheet</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">C) To acquire a competitor</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">D) To pay dividends to shareholders</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 6px; display: none;" class="explanation">
+                        <strong>Correct Answer: B</strong><br>
+                        Rent the Runway was in financial distress and used the rights offering as part of a growth recapitalization to reduce debt from substantial levels to $120M and extend maturity to 2029.
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <div class="quiz-question-text">3. In our internal process, why do we debit the client's account for the FULL oversubscription amount in Step 4, only to reverse it in Step 5?</div>
+                    <ul class="quiz-options">
+                        <li class="quiz-option" onclick="selectOption(this, false)">A) It's an accounting error that gets corrected</li>
+                        <li class="quiz-option" onclick="selectOption(this, true)">B) To lock in client funds and commitment before allocation, then adjust once the issuer determines actual allocation</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">C) To earn interest on the cash during the allocation period</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">D) Because DTC requires it</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 6px; display: none;" class="explanation">
+                        <strong>Correct Answer: B</strong><br>
+                        We debit the full requested amount to ensure funds are committed and available, then reverse and re-debit for the actual allocated amount once the issuer finalizes proration.
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <div class="quiz-question-text">4. A shareholder owns 2% of Company ABC before a rights offering. They decide NOT to participate in the offering. After the offering is completed and all other shareholders fully exercise their rights, what happens to this shareholder's ownership?</div>
+                    <ul class="quiz-options">
+                        <li class="quiz-option" onclick="selectOption(this, false)">A) They still own 2% - nothing changes</li>
+                        <li class="quiz-option" onclick="selectOption(this, true)">B) Their ownership percentage decreases (dilution), though they still own the same number of shares</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">C) Their shares are automatically sold</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">D) They receive cash compensation for not participating</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 6px; display: none;" class="explanation">
+                        <strong>Correct Answer: B</strong><br>
+                        When new shares are issued and the shareholder doesn't participate, their ownership is diluted. They own the same number of shares, but those shares represent a smaller percentage of the total outstanding shares.
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <div class="quiz-question-text">5. What was the most significant difference between GCI Liberty's and Rent the Runway's rights offerings?</div>
+                    <ul class="quiz-options">
+                        <li class="quiz-option" onclick="selectOption(this, false)">A) The subscription price discount</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">B) The subscription ratio</li>
+                        <li class="quiz-option" onclick="selectOption(this, true)">C) The strategic motivation - GCI was seeking growth capital from a position of strength, while RTR needed capital for financial restructuring</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">D) GCI's offering was tradeable and RTR's was not</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 6px; display: none;" class="explanation">
+                        <strong>Correct Answer: C</strong><br>
+                        The key difference is motivation: GCI Liberty was a healthy company raising $300M for growth, infrastructure, and potential acquisitions. Rent the Runway was in financial distress and needed to restructure their balance sheet and reduce debt.
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <div class="quiz-question-text">6. SCENARIO: You receive a client instruction at 4:30 PM to exercise both basic subscription and oversubscription for a rights offering that expires tomorrow. What is your team's immediate priority?</div>
+                    <ul class="quiz-options">
+                        <li class="quiz-option" onclick="selectOption(this, false)">A) Wait until morning to process when you're fresh</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">B) Call the client to confirm they really want to participate</li>
+                        <li class="quiz-option" onclick="selectOption(this, true)">C) Immediately begin processing to meet the 24-hour SLA and ensure submission by tomorrow's 8:00 AM - 2:15 PM EST PSOP window</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">D) Request an extension from DTC</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 6px; display: none;" class="explanation">
+                        <strong>Correct Answer: C</strong><br>
+                        With a 24-hour SLA and PSOP only open between 8:00 AM and 2:15 PM EST, the team must act immediately to ensure the submission can be made during tomorrow's window. Late processing means the client loses their opportunity to participate, which could result in significant financial harm.
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <div class="quiz-question-text">7. If GCI Liberty's rights offering had 95% basic subscription and the company issued 11,059,127 shares total, approximately how many shares were available for oversubscription allocation?</div>
+                    <ul class="quiz-options">
+                        <li class="quiz-option" onclick="selectOption(this, false)">A) 5,529,564 shares</li>
+                        <li class="quiz-option" onclick="selectOption(this, true)">B) 552,956 shares (approximately 5%)</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">C) 1,105,913 shares</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">D) All shares were available for oversubscription</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 6px; display: none;" class="explanation">
+                        <strong>Correct Answer: B</strong><br>
+                        If 95% went to basic subscription, only 5% was available for oversubscription: 11,059,127 × 0.05 = approximately 552,956 shares. This small pool explains why multiple rounds of proration were necessary.
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <div class="quiz-question-text">8. What does it mean that Rent the Runway's offering was "fully backstopped"?</div>
+                    <ul class="quiz-options">
+                        <li class="quiz-option" onclick="selectOption(this, false)">A) The company guaranteed to buy back any shares investors wanted to sell</li>
+                        <li class="quiz-option" onclick="selectOption(this, true)">B) APS, STORY3, and Nexus committed to purchase any shares not subscribed for by other shareholders, guaranteeing the full $12.5M would be raised</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">C) The offering had insurance against failure</li>
+                        <li class="quiz-option" onclick="selectOption(this, false)">D) The rights were protected from price declines</li>
+                    </ul>
+                    <div style="margin-top: 1rem; padding: 1rem; background: #e8f5e9; border-radius: 6px; display: none;" class="explanation">
+                        <strong>Correct Answer: B</strong><br>
+                        A backstop agreement means investors commit to purchase unsubscribed shares, guaranteeing the company raises the full intended amount. This was critical for Rent the Runway given their financial distress.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3>Discussion Questions for Team</h3>
+                <ol style="font-size: 1.05rem;">
+                    <li style="margin: 1.5rem 0;">How would you explain to a new team member why rights offerings are considered "shareholder-friendly" even though they can result in dilution?</li>
+                    <li style="margin: 1.5rem 0;">Walk through what happens to a client who owns 1,000 shares when a 3:2 rights offering is announced (3 rights for 2 shares). What are their options?</li>
+                    <li style="margin: 1.5rem 0;">Why might a client choose to participate in basic subscription but NOT oversubscription?</li>
+                    <li style="margin: 1.5rem 0;">What red flags would you look for in a rights offering that might indicate financial distress versus healthy growth capital raising?</li>
+                    <li style="margin: 1.5rem 0;">If you receive conflicting instructions from a client (e.g., email says "exercise all rights" but phone call says "sell the rights"), what's your protocol?</li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary & Key Takeaways</h2>
+            <div class="highlight-box">
+                <h3>What You Should Remember</h3>
+                <ul style="font-size: 1.05rem;">
+                    <li><strong>Rights offerings are a capital-raising tool</strong> that gives existing shareholders first opportunity to purchase new shares at a discount</li>
+                    <li><strong>The subscription ratio matters:</strong> It determines how many shares each shareholder can purchase (e.g., 5:1 means 5 rights needed for 1 share)</li>
+                    <li><strong>Same tool, different purposes:</strong> Companies use rights offerings for financial restructuring (Rent the Runway) or growth capital (GCI Liberty)</li>
+                    <li><strong>Dilution is real:</strong> Non-participating shareholders see their ownership percentage decrease, even though they own the same number of shares</li>
+                    <li><strong>Oversubscription is competitive:</strong> When demand exceeds supply (like GCI's 95% basic subscription), allocation is typically pro-rata</li>
+                    <li><strong>Operations require precision:</strong> 24-hour SLA, hard deadlines, seven-step process from entitlement to final settlement</li>
+                    <li><strong>Two-stage cash handling for oversubscription:</strong> Full debit on submission, reverse and re-debit based on actual allocation</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Corporate Actions Training | Rights Offerings Educational Resource</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Understanding Rights Offers, Dilution, and Pro-Rata Ownership</p>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.classList.remove('active');
+            });
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+            });
+            
+            // Toggle current FAQ
+            if (!isActive) {
+                answer.classList.add('active');
+                element.classList.add('active');
+            }
+        }
+
+        function selectOption(element, isCorrect) {
+            const parent = element.parentElement;
+            const explanation = parent.nextElementSibling;
+            
+            // Remove previous selections
+            parent.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+            });
+            
+            // Mark selection
+            if (isCorrect) {
+                element.classList.add('correct');
+            } else {
+                element.classList.add('incorrect');
+            }
+            
+            // Show explanation
+            explanation.style.display = 'block';
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to nav on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.style.borderBottomColor = 'var(--accent)';
+                    link.style.color = 'var(--primary)';
+                } else {
+                    link.style.borderBottomColor = 'transparent';
+                    link.style.color = 'var(--text)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
